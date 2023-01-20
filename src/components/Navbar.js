@@ -52,7 +52,7 @@ export default function Navbar() {
 					<li className="menu_item">Home</li>
 					<li className="menu_item">Challenge</li>
 					<li className="menu_item">Favourites</li>
-				</ul>
+				</ul> 
 				<div className="menu_search">
 					<input type="text" placeholder="search" />
 					<button className="search_button">
