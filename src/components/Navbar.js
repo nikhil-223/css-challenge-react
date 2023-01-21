@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
         let n = 0;
 		const changestate= () => {
 			if (n === 0) {
@@ -44,20 +45,59 @@ export default function Navbar() {
 				}
   return (
 		<>
-			<nav className="navbar">
+			<nav className={`navbar bg-${props.mode}`}>
 				<ul className="navbar_menu">
-					<li className="menu_item_before menu_item1" onClick={link_icon}>
+					<li
+						className={`menu_item_before menu_item1 text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}
+						onClick={link_icon}>
 						<i className="fa-brands fa-wolf-pack-battalion fa-2xl"></i>
 					</li>
-					<li className="menu_item">Home</li>
-					<li className="menu_item">Challenge</li>
-					<li className="menu_item">Favourites</li>
-				</ul> 
+					<li
+						className={`menu_item text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
+						<Link
+							className={`link_act text-${
+								props.mode === "grey" ? "dark" : "light"
+							}`}
+							to="/home">
+							Home
+						</Link>
+					</li>
+					<li
+						className={`menu_item text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
+						<Link
+							className={`link_act text-${
+								props.mode === "grey" ? "dark" : "light"
+							}`}
+							to="/middle">
+							CSS
+						</Link>
+					</li>
+					<li
+						className={`menu_item text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
+						Favourites
+					</li>
+				</ul>
 				<div className="menu_search">
-					<input type="text" placeholder="search" />
-					<button className="search_button">
-						<i className="fa-solid fa-magnifying-glass"></i>
-					</button>
+					<div
+						className="bg-red mx-2 my-2 pallete"
+						onClick={props.changeRedMode}></div>
+					<div
+						className="bg-green mx-2 my-2 pallete"
+						onClick={props.changeGreenMode}></div>
+					<div
+						className="bg-blue mx-2 my-2 pallete"
+						onClick={props.changeBlueMode}></div>
+					<div
+						className="bg-light mx-2 my-2 pallete"
+						onClick={props.changeLightMode}></div>
 				</div>
 				<div className="menu_bar_res">
 					<div className="icon" onClick={link_icon}>
