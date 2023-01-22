@@ -3,7 +3,7 @@ code {
 		monospace;
 }
 
-  @import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed&family=Roboto:wght@300&display=swap");
 
 * {
 	padding: 0;
@@ -904,7 +904,7 @@ body::-webkit-scrollbar {
 .basecss .profile_text {
 	position: relative;
 }
-.profile_text span{
+.profile_text span {
 	font-size: 1.6rem;
 }
 .basecss .profile_links {
@@ -916,50 +916,15 @@ body::-webkit-scrollbar {
 	align-items: center;
 	gap: 1rem;
 }
-.profile_links i{
+.profile_links i {
 	cursor: pointer;
 }
-.profile_links i:nth-child(2):hover~ .githublabel{
-	visibility: visible;
+
+.githublabel {
+	display: none;
 }
-.githublabel{
-	position: absolute;
-	top: -2rem;
-	left: 7rem;
-	font-size:0.8rem;
-	font-family: 'Poppins', Courier, monospace;
-	font-weight: 700;
-	border-radius: 0.2rem;
-	width: 5rem;
-	height: 2rem;
-	color: #ffffff;
-	background-color: rgb(20, 75, 63);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	line-height: 1rem;
-    visibility: hidden;
-}
-.profile_links i:nth-child(1):hover~ .linkedinlabel{
-	visibility: visible;
-}
-.linkedinlabel{
-	position: absolute;
-	font-size:0.8rem;
-	font-family: 'Poppins', Courier, monospace;
-	font-weight: 800;
-	border-radius: 0.2rem;
-	width: 5rem;
-	height: 2rem;
-	color: #ffffff;
-	top: -2rem;
-	left: -6rem;
-	background-color: rgb(20, 75, 63);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	line-height: 1rem;
-    visibility: hidden;
+.linkedinlabel {
+	display: none;
 }
 .pallete {
 	height: 2rem;
@@ -982,7 +947,7 @@ body::-webkit-scrollbar {
 	background-color: #260606;
 }
 .bg-green {
-	background-color: #042829;
+	background-color: #031c1c;
 }
 .bg-blue {
 	background-color: #091530;
@@ -1008,15 +973,15 @@ body::-webkit-scrollbar {
 }
 .navbar_menu .animation {
 	display: none;
-		position: absolute;
-		height: 0.5rem;
-		left: 8rem;
-		bottom: 0;
-		z-index: 0;
-		background: var(--c3);
-		border-radius: 0.5rem 0.5rem 0 0;
-		width: 5rem;
-		transition: all 0.4s;
+	position: absolute;
+	height: 0.5rem;
+	left: 6rem;
+	bottom: 0;
+	z-index: 0;
+	background: var(--c3);
+	border-radius: 0.5rem 0.5rem 0 0;
+	width: 5rem;
+	transition: all 0.4s;
 }
 
 .aboutme {
@@ -1042,8 +1007,8 @@ body::-webkit-scrollbar {
 	text-shadow: 0.1rem 0.2rem 0.2rem black;
 }
 .aboutme > div:nth-child(1) span:nth-child(1) {
-	font-size: 12vw;	
-	line-height: 6rem;
+	font-size: 12vw;
+	line-height: 5rem;
 }
 .aboutme > div:nth-child(1) span:nth-child(2) {
 	font-size: 15vw;
@@ -1052,7 +1017,7 @@ body::-webkit-scrollbar {
 .aboutme > div:nth-child(1) span:nth-child(3) {
 	font-size: 2rem;
 	text-align: center;
-	font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: 900;
 }
 .menu_item:nth-child(0) {
@@ -1110,13 +1075,13 @@ body::-webkit-scrollbar {
 		font-size: 1.2rem;
 		z-index: 5;
 	}
-	
+
 	.navbar_menu {
 		display: flex;
 		flex-direction: row;
 		gap: 1.6rem;
 		align-items: center;
-		margin: 0.5rem 0 0.5rem 2rem;
+		margin: 0.5rem 0 0.5rem 0rem;
 		order: 1;
 	}
 	.menu_search {
@@ -1153,7 +1118,7 @@ body::-webkit-scrollbar {
 		font-size: 2.2rem;
 		text-align: left;
 	}
-	::marker{
+	::marker {
 		content: "";
 	}
 }
@@ -1165,12 +1130,12 @@ body::-webkit-scrollbar {
 		grid-template-columns: auto auto auto auto;
 	}
 	.navbar {
-		gap: 5rem;	
+		gap: 5rem;
 	}
 	.menu_search {
-		margin-right: 2rem;
+		margin-right: 3rem;
 	}
-	
+
 	.menu_item:nth-child(0) {
 		display: block;
 	}
@@ -1183,5 +1148,47 @@ body::-webkit-scrollbar {
 	.aboutme > div:nth-child(1) span:nth-child(2) {
 		font-size: 7rem;
 	}
-	
+
+	.profile_links i:nth-child(1):hover ~ .linkedinlabel {
+		visibility: visible;
+	}
+	.linkedinlabel {
+		position: absolute;
+		font-size: 0.8rem;
+		font-family: "Poppins", Courier, monospace;
+		font-weight: 800;
+		border-radius: 0.2rem;
+		width: 5rem;
+		height: 2rem;
+		color: #ffffff;
+		top: -2rem;
+		left: -6rem;
+		background-color: rgb(20, 75, 63);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1rem;
+		visibility: hidden;
+	}
+	.profile_links i:nth-child(2):hover ~ .githublabel {
+		visibility: visible;
+	}
+	.githublabel {
+		position: absolute;
+		top: -2rem;
+		left: 7rem;
+		font-size: 0.8rem;
+		font-family: "Poppins", Courier, monospace;
+		font-weight: 700;
+		border-radius: 0.2rem;
+		width: 5rem;
+		height: 2rem;
+		color: #ffffff;
+		background-color: rgb(20, 75, 63);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1rem;
+		visibility: hidden;
+	}
 }

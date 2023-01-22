@@ -37,17 +37,17 @@ export default function Navbar(props) {
 		const changepage1=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
-			document.getElementsByClassName("animation")[0].style.left="8rem"
+			document.getElementsByClassName("animation")[0].style.left="6rem"
 		}
 		const changepage2=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
-			document.getElementsByClassName("animation")[0].style.left="14rem"
+			document.getElementsByClassName("animation")[0].style.left="12rem"
 		}
 		const changepage3=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="7rem"
-			document.getElementsByClassName("animation")[0].style.left="20rem"
+			document.getElementsByClassName("animation")[0].style.left="18rem"
 		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
