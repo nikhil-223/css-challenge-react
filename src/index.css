@@ -3,7 +3,8 @@ code {
 		monospace;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed&family=Roboto:wght@300&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&family=Poppins:wght@200&family=Roboto+Condensed&family=Roboto:wght@300&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -96,10 +97,6 @@ body::-webkit-scrollbar {
 	align-items: center;
 	height: 3.5rem;
 	justify-content: space-between;
-}
-.navbar div .butt {
-	margin-right: 1rem;
-	transform: scale(70%);
 }
 #contain {
 	width: auto;
@@ -438,7 +435,9 @@ body::-webkit-scrollbar {
 }
 .butt {
 	width: 4rem;
-	height: 3.1rem;
+	height: 4.1rem;
+	margin-right: 1rem;
+	transform: scale(70%);
 	display: flex;
 	background-color: transparent;
 	border: none;
@@ -899,16 +898,68 @@ body::-webkit-scrollbar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
 
-.basecss span:nth-child(3) {
-	font-size: 1.5rem;
-	margin-top: 0.5rem;
+.basecss .profile_text {
+	position: relative;
 }
-.basecss span:nth-child(1) {
+.profile_text span{
+	font-size: 1.6rem;
+}
+.basecss .profile_links {
+	position: relative;
+	top: -1.5rem;
 	font-size: 1.5rem;
-	margin: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.profile_links i{
+	cursor: pointer;
+}
+.profile_links i:nth-child(2):hover~ .githublabel{
+	visibility: visible;
+}
+.githublabel{
+	position: absolute;
+	top: -2rem;
+	left: 7rem;
+	font-size:0.8rem;
+	font-family: 'Poppins', Courier, monospace;
+	font-weight: 700;
+	border-radius: 0.2rem;
+	width: 5rem;
+	height: 2rem;
+	color: #ffffff;
+	background-color: rgb(20, 75, 63);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1rem;
+    visibility: hidden;
+}
+.profile_links i:nth-child(1):hover~ .linkedinlabel{
+	visibility: visible;
+}
+.linkedinlabel{
+	position: absolute;
+	font-size:0.8rem;
+	font-family: 'Poppins', Courier, monospace;
+	font-weight: 800;
+	border-radius: 0.2rem;
+	width: 5rem;
+	height: 2rem;
+	color: #ffffff;
+	top: -2rem;
+	left: -6rem;
+	background-color: rgb(20, 75, 63);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1rem;
+    visibility: hidden;
 }
 .pallete {
 	height: 2rem;
@@ -968,22 +1019,10 @@ body::-webkit-scrollbar {
 		transition: all 0.4s;
 }
 
-.menu_item:nth-child(2):hover ~ .animation {
-	left: 8rem;
-	width: 5rem;
-}
-.menu_item:nth-child(3):hover ~ .animation {
-	left: 14rem;
-	width: 5rem;
-}
-.menu_item:nth-child(4):hover ~ .animation {
-	left: 19.5rem;
-	width: 8rem;
-}
 .aboutme {
 	height: 110vh;
 	width: 100vw;
-	color: white;
+	color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
 	background-image: url("/public/images/lufy.jpg");
@@ -999,19 +1038,22 @@ body::-webkit-scrollbar {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	color: #ffffff;
-	font-family: "Pacifico", cursive;
-	text-shadow: 0.1rem 0.2rem 1rem black;
+	font-family: "Acme", cursive;
+	text-shadow: 0.1rem 0.2rem 0.2rem black;
 }
 .aboutme > div:nth-child(1) span:nth-child(1) {
-	font-size: 12vw;
+	font-size: 12vw;	
+	line-height: 6rem;
 }
 .aboutme > div:nth-child(1) span:nth-child(2) {
 	font-size: 15vw;
+	line-height: 6rem;
 }
 .aboutme > div:nth-child(1) span:nth-child(3) {
 	font-size: 2rem;
 	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
 }
 .menu_item:nth-child(0) {
 	display: none;
@@ -1108,7 +1150,7 @@ body::-webkit-scrollbar {
 		font-size: 5rem;
 	}
 	.aboutme > div:nth-child(1) span:nth-child(3) {
-		font-size: 2rem;
+		font-size: 2.2rem;
 		text-align: left;
 	}
 	::marker{
@@ -1141,7 +1183,5 @@ body::-webkit-scrollbar {
 	.aboutme > div:nth-child(1) span:nth-child(2) {
 		font-size: 7rem;
 	}
-	.aboutme > div:nth-child(1) span:nth-child(3) {
-		font-size: 2rem;
-	}
+	
 }

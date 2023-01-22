@@ -40,7 +40,7 @@ function App() {
 					changeLightMode={changeLightMode}
 				/>
 				<Routes>
-					<Route path="/middle" element={<Middle/>} />
+					<Route path="/middle" element={<Middle mode={mode}/>} />
 					<Route path="/home" element={<Home/>} />
 					<Route path="/" element={<Home/>} />
 				</Routes>

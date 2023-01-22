@@ -8,7 +8,7 @@ export default function Home() {
           <div>
           <span>Nikhil </span>
           <span>Shekhawat</span>
-          <span> Hi, i am a web developer ,i create beautiful and functional websites , below are services i provide</span>
+          <span> Hi, I am a web developer , I create beautiful and functional websites , below are services i provide</span>
           </div>
         </div>
 			</div>

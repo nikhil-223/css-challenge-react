@@ -44,6 +44,11 @@ export default function Navbar(props) {
 			document.getElementsByClassName("animation")[0].style.width="5rem"
 			document.getElementsByClassName("animation")[0].style.left="14rem"
 		}
+		const changepage3=()=>{
+			changestate();
+			document.getElementsByClassName("animation")[0].style.width="7rem"
+			document.getElementsByClassName("animation")[0].style.left="20rem"
+		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
 					window.open("https://100dayscss.com/");
@@ -89,7 +94,14 @@ export default function Navbar(props) {
 						className={`menu_item text-${
 							props.mode === "grey" ? "dark" : "light"
 						}`}>
-						Favourites
+						<Link
+							onClick={changepage3}
+							className={`link_act text-${
+								props.mode === "grey" ? "dark" : "light"
+							}`}
+							to="/middle">
+							Favourites
+						</Link>
 					</li>
 					<div className="animation start_home"></div>
 				</ul>

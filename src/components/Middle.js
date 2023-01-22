@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Middle() {
+export default function Middle(props) {
     let n=0;
     const changeshape = () => {
 			if (n === 0) { 
@@ -79,7 +79,7 @@ export default function Middle() {
 						<div className="info">
 							<div className="info_item1">
 								<div className="ppic">
-									<img src="./images/profilee.jpg"  alt="profile" />
+									<img src="./images/profilee.jpg" alt="profile" />
 								</div>
 								<div className="pname">
 									<span> Jessica Potter</span>
@@ -114,9 +114,18 @@ export default function Middle() {
 					{/* <!-- menu  --> */}
 					<div id="menu_container">
 						<button className="butt" onClick={changeshape}>
-							<div className="lines first"></div>
-							<div className="lines second"></div>
-							<div className="lines third"></div>
+							<div
+								className={`lines first bg-${
+									props.mode === "grey" ? "dark" : "light"
+								}`}></div>
+							<div
+								className={`lines second bg-${
+									props.mode === "grey" ? "dark" : "light"
+								}`}></div>
+							<div
+								className={`lines third bg-${
+									props.mode === "grey" ? "dark" : "light"
+								}`}></div>
 						</button>
 					</div>
 					{/* <!-- waves --> */}
