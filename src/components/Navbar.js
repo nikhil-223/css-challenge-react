@@ -34,7 +34,16 @@ const changestate = () => {
 	}
 }; 
 export default function Navbar(props) {
-
+		const changepage1=()=>{
+			changestate();
+			document.getElementsByClassName("animation")[0].style.width="5rem"
+			document.getElementsByClassName("animation")[0].style.left="8rem"
+		}
+		const changepage2=()=>{
+			changestate();
+			document.getElementsByClassName("animation")[0].style.width="5rem"
+			document.getElementsByClassName("animation")[0].style.left="14rem"
+		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
 					window.open("https://100dayscss.com/");
@@ -55,7 +64,7 @@ export default function Navbar(props) {
 							props.mode === "grey" ? "dark" : "light"
 						}`}>
 						<Link
-							onClick={changestate}
+							onClick={changepage1}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
@@ -68,7 +77,7 @@ export default function Navbar(props) {
 							props.mode === "grey" ? "dark" : "light"
 						}`}>
 						<Link
-							onClick={changestate}
+							onClick={changepage2}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
@@ -82,6 +91,7 @@ export default function Navbar(props) {
 						}`}>
 						Favourites
 					</li>
+					<div className="animation start_home"></div>
 				</ul>
 				<div className="menu_search">
 					<div
