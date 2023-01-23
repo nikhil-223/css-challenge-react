@@ -8,6 +8,7 @@ code {
 * {
 	padding: 0;
 	margin: 0;
+	cursor: none !important;
 }
 :root {
 	font-size: 3.5vw;
@@ -1057,6 +1058,19 @@ body::-webkit-scrollbar {
 	font-size: 1.1rem;
 	z-index: 5;
 }
+#cursor{
+	display: none;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: 0rem;
+    top: 0rem;
+    border-radius: 50%;
+    background-color: white;
+	z-index: 55;
+	filter: contrast(1);
+
+}
 
 @media only screen and (min-width: 500px) {
 	:root {
@@ -1190,5 +1204,8 @@ body::-webkit-scrollbar {
 		align-items: center;
 		line-height: 1rem;
 		visibility: hidden;
+	}
+	#cursor{
+		display: block ;
 	}
 }

@@ -29,8 +29,15 @@ function App() {
 		changestate();
 		document.body.style.backgroundColor = "white";
 	};
+	const x = function (event) {
+		document.getElementById("cursor").style.left = `${event.pageX - 16}px`;
+		document.getElementById("cursor").style.top = `${event.pageY}px`;
+	};
+	document.addEventListener("mousemove", x);
 	return (
 		<>
+			{" "}
+			<div id="cursor"></div>
 			<BrowserRouter>
 				<Navbar
 					mode={mode}
@@ -40,9 +47,9 @@ function App() {
 					changeLightMode={changeLightMode}
 				/>
 				<Routes>
-					<Route path="/middle" element={<Middle mode={mode}/>} />
-					<Route path="/home" element={<Home/>} />
-					<Route path="/" element={<Home/>} />
+					<Route path="/middle" element={<Middle mode={mode} />} />
+					<Route path="/home" element={<Home />} />
+					<Route path="/" element={<Home />} />
 				</Routes>
 				<Bottom mode={mode} />
 			</BrowserRouter>

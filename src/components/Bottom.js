@@ -9,7 +9,7 @@ export default function Bottom(props) {
 	}
   return (
 		<>
-			<div class={`basecss bg-${props.mode}`}>
+			<div className={`basecss bg-${props.mode}`}>
 				<div
 					className={` profile_text text-${
 						props.mode === "grey" ? "dark" : "light"
@@ -20,8 +20,8 @@ export default function Bottom(props) {
 					className={`profile_links text-${
 						props.mode === "grey" ? "dark" : "light"
 					}`}>
-					<i id='linkedin' onClick={linkedIn} class=" fa-brands fa-linkedin fa-2xl"></i>
-					<i id='github' onClick={gitHub} class=" fa-brands fa-square-github  fa-2xl"></i>
+					<i id='linkedin' onClick={linkedIn} className=" fa-brands fa-linkedin fa-2xl"></i>
+					<i id='github' onClick={gitHub} className=" fa-brands fa-square-github  fa-2xl"></i>
 					<div className='githublabel'> GitHub</div>
 					<div className='linkedinlabel'> Linked In</div>
 				</div>
