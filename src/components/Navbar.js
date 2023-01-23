@@ -37,21 +37,25 @@ export default function Navbar(props) {
 		
 		const changepage1=()=>{
 			changestate();
+			document.title="Nikhil- About Me"
 			document.getElementsByClassName("animation")[0].style.width="7rem"
 			document.getElementsByClassName("animation")[0].style.left="6rem"
 		}
 		const changepage2=()=>{
 			changestate();
+			document.title="Nikhil- CSS"
 			document.getElementsByClassName("animation")[0].style.width="5rem"
 			document.getElementsByClassName("animation")[0].style.left="14rem"	
 		}
 		const changepage3=()=>{
 			changestate();
+			document.title="Nikhil- Favoutites"
 			document.getElementsByClassName("animation")[0].style.width="7rem"
 			document.getElementsByClassName("animation")[0].style.left="20rem"
 		}
 		const changepage4=()=>{
 			changestate();
+			document.title="Nikhil- Contact Me"
 			document.getElementsByClassName("animation")[0].style.width="8rem"
 			document.getElementsByClassName("animation")[0].style.left="29rem"
 		}
