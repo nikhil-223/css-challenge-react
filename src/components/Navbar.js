@@ -34,26 +34,26 @@ const changestate = () => {
 	}
 }; 
 export default function Navbar(props) {
-		const cursoron=()=>{
-			document.getElementById("cursor").style.transform = "scale(1)";
-		}
-		const cursordown=()=>{
-			document.getElementById("cursor").style.transform = "scale(0.7)";
-		}
+		
 		const changepage1=()=>{
 			changestate();
-			document.getElementsByClassName("animation")[0].style.width="5rem"
+			document.getElementsByClassName("animation")[0].style.width="7rem"
 			document.getElementsByClassName("animation")[0].style.left="6rem"
 		}
 		const changepage2=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
-			document.getElementsByClassName("animation")[0].style.left="12rem"	
+			document.getElementsByClassName("animation")[0].style.left="14rem"	
 		}
 		const changepage3=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="7rem"
-			document.getElementsByClassName("animation")[0].style.left="18rem"
+			document.getElementsByClassName("animation")[0].style.left="20rem"
+		}
+		const changepage4=()=>{
+			changestate();
+			document.getElementsByClassName("animation")[0].style.width="8rem"
+			document.getElementsByClassName("animation")[0].style.left="29rem"
 		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
@@ -80,13 +80,13 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage1}
-							onMouseUp={cursoron}
-							onMouseDown={cursordown}
+							onMouseUp={props.cursoron}
+							onMouseDown={props.cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
 							to="/home">
-							Home
+							About Me
 						</Link>
 					</li>
 					<li
@@ -95,8 +95,8 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage2}
-							onMouseUp={cursoron}
-							onMouseDown={cursordown}
+							onMouseUp={props.cursoron}
+							onMouseDown={props.cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
@@ -110,13 +110,28 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage3}
-							onMouseUp={cursoron}
-							onMouseDown={cursordown}
+							onMouseUp={props.cursoron}
+							onMouseDown={props.cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
 							to="/middle">
 							Favourites
+						</Link>
+					</li>
+					<li
+						className={`menu_item text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
+						<Link
+							onClick={changepage4}
+							onMouseUp={props.cursoron}
+							onMouseDown={props.cursordown}
+							className={`link_act text-${
+								props.mode === "grey" ? "dark" : "light"
+							}`}
+							to="/contact">
+							Contact Me
 						</Link>
 					</li>
 					<div className="animation start_home"></div>

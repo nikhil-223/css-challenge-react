@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Middle from "./components/Middle";
 import Bottom from "./components/Bottom";
 import Home from "./components/Home";
+import Contact from "./components/Contact";
 import { useState } from "react";
 import { changestate } from "./components/Navbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
@@ -43,6 +44,7 @@ function App() {
 		else if(xy.matches){
 			document.getElementById("cursor").style.display = `inline-block`;	
 		}
+		}
 		else{
 			document.getElementById("cursor").style.display = `none`;	
 		}
@@ -50,13 +52,18 @@ function App() {
 	};
 	let xx = window.matchMedia("(min-width: 200px)");
 	let xy = window.matchMedia("(min-width: 1000px)");
+	let xz = window.matchMedia("(min-width: 500px)");
 	document.addEventListener("mousemove", x);
 	document.addEventListener("mouseout", y)
 	document.addEventListener("mouseover", z)
-
+	const cursoron = () => {
+		document.getElementById("cursor").style.transform = "scale(1)";
+	};
+	const cursordown = () => {
+		document.getElementById("cursor").style.transform = "scale(0.7)";
+	};
 	return (
 		<>
-			
 			<BrowserRouter>
 				<Navbar
 					mode={mode}
@@ -64,10 +71,22 @@ function App() {
 					changeGreenMode={changeGreenMode}
 					changeRedMode={changeRedMode}
 					changeLightMode={changeLightMode}
+					cursoron={cursoron}
+					cursordown={cursordown}
 				/>
 				<Routes>
 					<Route path="/middle" element={<Middle mode={mode} />} />
 					<Route path="/home" element={<Home />} />
+					<Route
+						path="/contact"
+						element={
+							<Contact
+								mode={mode}
+								cursoron={cursoron}
+								cursordown={cursordown}
+							/>
+						}
+					/>
 					<Route path="/" element={<Home />} />
 				</Routes>
 				<Bottom mode={mode} />
