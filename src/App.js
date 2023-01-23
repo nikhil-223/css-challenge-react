@@ -34,10 +34,14 @@ function App() {
 		document.getElementById("cursor").style.top = `${event.pageY-10}px`;
 	};
 	const y = function (event) {
-		
+		document.getElementById("cursor").style.display = `none`;
+	};
+	const z = function (event) {
+		document.getElementById("cursor").style.display = `inline-block`;
 	};
 	document.addEventListener("mousemove", x);
-	// document.getElementsByClassName("link_act")[0].addEventListener("click", y);
+	document.addEventListener("mouseout", y)
+	document.addEventListener("mouseover", z)
 
 	return (
 		<>

@@ -1207,6 +1207,6 @@ body::-webkit-scrollbar {
 		visibility: hidden;
 	}
 	#cursor{
-		display: block ;
+		display: none ;
 	}
 }

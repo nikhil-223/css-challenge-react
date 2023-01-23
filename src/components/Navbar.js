@@ -34,32 +34,26 @@ const changestate = () => {
 	}
 }; 
 export default function Navbar(props) {
+		const cursoron=()=>{
+			document.getElementById("cursor").style.transform = "scale(1)";
+		}
+		const cursordown=()=>{
+			document.getElementById("cursor").style.transform = "scale(0.7)";
+		}
 		const changepage1=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
 			document.getElementsByClassName("animation")[0].style.left="6rem"
-			document.getElementById("cursor").style.transform = "scale(0.7)";
-			setTimeout(() => {
-				document.getElementById("cursor").style.transform = "scale(1)";
-			}, 150);
 		}
 		const changepage2=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
-			document.getElementsByClassName("animation")[0].style.left="12rem"
-			document.getElementById("cursor").style.transform = "scale(0.7)";
-			setTimeout(() => {
-				document.getElementById("cursor").style.transform = "scale(1)";
-			}, 150);
+			document.getElementsByClassName("animation")[0].style.left="12rem"	
 		}
 		const changepage3=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="7rem"
 			document.getElementsByClassName("animation")[0].style.left="18rem"
-			document.getElementById("cursor").style.transform = "scale(0.7)";
-			setTimeout(() => {
-				document.getElementById("cursor").style.transform = "scale(1)";
-			}, 150);
 		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
@@ -86,6 +80,8 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage1}
+							onMouseUp={cursoron}
+							onMouseDown={cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
@@ -99,6 +95,8 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage2}
+							onMouseUp={cursoron}
+							onMouseDown={cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
@@ -112,6 +110,8 @@ export default function Navbar(props) {
 						}`}>
 						<Link
 							onClick={changepage3}
+							onMouseUp={cursoron}
+							onMouseDown={cursordown}
 							className={`link_act text-${
 								props.mode === "grey" ? "dark" : "light"
 							}`}
