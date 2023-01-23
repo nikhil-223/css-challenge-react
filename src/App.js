@@ -30,14 +30,18 @@ function App() {
 		document.body.style.backgroundColor = "white";
 	};
 	const x = function (event) {
-		document.getElementById("cursor").style.left = `${event.pageX - 16}px`;
-		document.getElementById("cursor").style.top = `${event.pageY}px`;
+		document.getElementById("cursor").style.left = `${event.pageX-10}px`;
+		document.getElementById("cursor").style.top = `${event.pageY-10}px`;
+	};
+	const y = function (event) {
+		
 	};
 	document.addEventListener("mousemove", x);
+	// document.getElementsByClassName("link_act")[0].addEventListener("click", y);
+
 	return (
 		<>
-			{" "}
-			<div id="cursor"></div>
+			
 			<BrowserRouter>
 				<Navbar
 					mode={mode}

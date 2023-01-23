@@ -1061,14 +1061,15 @@ body::-webkit-scrollbar {
 #cursor{
 	display: none;
     position: absolute;
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     left: 0rem;
     top: 0rem;
     border-radius: 50%;
     background-color: white;
 	z-index: 55;
-	filter: contrast(1);
+	mix-blend-mode: difference;
+	pointer-events: none;
 
 }
 

@@ -38,16 +38,28 @@ export default function Navbar(props) {
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
 			document.getElementsByClassName("animation")[0].style.left="6rem"
+			document.getElementById("cursor").style.transform = "scale(0.7)";
+			setTimeout(() => {
+				document.getElementById("cursor").style.transform = "scale(1)";
+			}, 150);
 		}
 		const changepage2=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="5rem"
 			document.getElementsByClassName("animation")[0].style.left="12rem"
+			document.getElementById("cursor").style.transform = "scale(0.7)";
+			setTimeout(() => {
+				document.getElementById("cursor").style.transform = "scale(1)";
+			}, 150);
 		}
 		const changepage3=()=>{
 			changestate();
 			document.getElementsByClassName("animation")[0].style.width="7rem"
 			document.getElementsByClassName("animation")[0].style.left="18rem"
+			document.getElementById("cursor").style.transform = "scale(0.7)";
+			setTimeout(() => {
+				document.getElementById("cursor").style.transform = "scale(1)";
+			}, 150);
 		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
@@ -55,6 +67,10 @@ export default function Navbar(props) {
 				}
   return (
 		<>
+			{" "}
+			<div
+				id="cursor"
+				className={`bg-${props.mode === "grey" ? "dark" : "light"}`}></div>
 			<nav className={`navbar bg-${props.mode}`}>
 				<ul className="navbar_menu">
 					<li
