@@ -36,9 +36,20 @@ function App() {
 	const y = function (event) {
 		document.getElementById("cursor").style.display = `none`;
 	};
-	const z = function (event) {
-		document.getElementById("cursor").style.display = `inline-block`;
+	const z = function (xx) {
+		if(xx.matches){
+			document.getElementById("cursor").style.display = `none`;
+		}
+		else if(xy.matches){
+			document.getElementById("cursor").style.display = `inline-block`;	
+		}
+		else{
+			document.getElementById("cursor").style.display = `none`;	
+		}
+		
 	};
+	let xx = window.matchMedia("(min-width: 200px)");
+	let xy = window.matchMedia("(min-width: 1000px)");
 	document.addEventListener("mousemove", x);
 	document.addEventListener("mouseout", y)
 	document.addEventListener("mouseover", z)
