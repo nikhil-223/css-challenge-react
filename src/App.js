@@ -44,6 +44,8 @@ function App() {
 		else if(xy.matches){
 			document.getElementById("cursor").style.display = `inline-block`;	
 		}
+		else if(xz.matches){
+			document.getElementById("cursor").style.display = `none`;	
 		}
 		else{
 			document.getElementById("cursor").style.display = `none`;	
