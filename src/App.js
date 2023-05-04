@@ -22,7 +22,7 @@ function App() {
 	const changeRedMode = () => {
 		setmode("darkred");
 		changestate();
-		document.body.style.backgroundColor = "#531414";
+		document.body.style.backgroundColor = "#531414"; 
 	};
 	const changeLightMode = () => {
 		setmode("grey");
@@ -51,7 +51,7 @@ function App() {
 		}
 		
 	};
-	let xx = window.matchMedia("(min-width: 200px)");
+	// let xx = window.matchMedia("(min-width: 200px)");
 	let xy = window.matchMedia("(min-width: 1000px)");
 	let xz = window.matchMedia("(min-width: 500px)");
 	document.addEventListener("mousemove", x);
