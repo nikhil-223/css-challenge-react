@@ -39,36 +39,41 @@ export default function Navbar(props) {
 			changestate();
 			document.title="Nikhil- About Me"
 			document.getElementsByClassName("animation")[0].style.width="7rem"
-			document.getElementsByClassName("animation")[0].style.left="6rem"
+			document.getElementsByClassName("animation")[0].style.right="49.2rem"
 		}
 		const changepage2=()=>{
 			changestate();
 			document.title="Nikhil- CSS"
 			document.getElementsByClassName("animation")[0].style.width="5rem"
-			document.getElementsByClassName("animation")[0].style.left="14rem"	
+			document.getElementsByClassName("animation")[0].style.right="43.2rem"	
 		}
 		const changepage3=()=>{
 			changestate();
 			document.title="Nikhil- Favoutites"
 			document.getElementsByClassName("animation")[0].style.width="7rem"
-			document.getElementsByClassName("animation")[0].style.left="20rem"
+			document.getElementsByClassName("animation")[0].style.right="35.2rem"
 		}
 		const changepage4=()=>{
 			changestate();
 			document.title="Nikhil- Contact Me"
 			document.getElementsByClassName("animation")[0].style.width="8rem"
-			document.getElementsByClassName("animation")[0].style.left="29rem"
+			document.getElementsByClassName("animation")[0].style.right="25.3rem"
 		}
         const link_icon = () => {
 					// location.href = "https://100dayscss.com/";
 					window.open("https://100dayscss.com/");
 				}
+		const modes = () => {
+			const modes = document.getElementsByClassName("modes")[0];
+			if (modes.style.display === "none") {
+				modes.style.display = "flex";
+			} else {
+				modes.style.display = "none";
+			}
+		};
   return (
 		<>
 			{" "}
-			<div
-				id="cursor"
-				className={`bg-${props.mode === "grey" ? "dark" : "light"}`}></div>
 			<nav className={`navbar bg-${props.mode}`}>
 				<ul className="navbar_menu">
 					<li
@@ -76,7 +81,7 @@ export default function Navbar(props) {
 							props.mode === "grey" ? "dark" : "light"
 						}`}
 						onClick={link_icon}>
-						<i className="fa-brands fa-wolf-pack-battalion fa-2xl"></i>
+						{/* <i className="fa-brands fa-wolf-pack-battalion fa-2xl"></i> */}
 					</li>
 					<li
 						className={`menu_item text-${
@@ -138,22 +143,59 @@ export default function Navbar(props) {
 							Contact Me
 						</Link>
 					</li>
+					<li onClick={modes}>
+						<Link
+							className={`link_act text-${
+								props.mode === "grey" ? "dark" : "light"
+							}`}
+							id="mode_span">
+							{" "}
+							<i className="fa-solid fa-circle-half-stroke fa-lg"></i>
+						</Link>
+						<div
+							style={{display:"none"}}
+							className={`modes bg-${props.mode}`}>
+							<div onClick={props.changeRedMode}>
+								<span
+									className={`text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}>
+									Dark Red Mode
+								</span>
+								<div className="bg-red mx-2 my-2 pallete"></div>
+							</div>
+							<div onClick={props.changeGreenMode}>
+								<span
+									className={`text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}>
+									Dark Red Mode
+								</span>
+								<div className="bg-green mx-2 my-2 pallete"></div>
+							</div>
+							<div onClick={props.changeBlueMode}>
+								<span
+									className={`text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}>
+									Dark Red Mode
+								</span>
+								<div className="bg-blue mx-2 my-2 pallete"></div>
+							</div>
+							<div onClick={props.changeLightMode}>
+								<span
+									className={`text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}>
+									Dark Red Mode
+								</span>
+								<div className="bg-light mx-2 my-2 pallete"></div>
+							</div>
+						</div>
+					</li>
 					<div className="animation start_home"></div>
 				</ul>
-				<div className="menu_search">
-					<div
-						className="bg-red mx-2 my-2 pallete"
-						onClick={props.changeRedMode}></div>
-					<div
-						className="bg-green mx-2 my-2 pallete"
-						onClick={props.changeGreenMode}></div>
-					<div
-						className="bg-blue mx-2 my-2 pallete"
-						onClick={props.changeBlueMode}></div>
-					<div
-						className="bg-light mx-2 my-2 pallete"
-						onClick={props.changeLightMode}></div>
-				</div>
+				<div className="menu_search"></div>
 				<div className="menu_bar_res">
 					<div
 						className={`icon text-${props.mode === "grey" ? "dark" : "light"}`}

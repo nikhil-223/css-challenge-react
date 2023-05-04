@@ -1,4 +1,3 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
 import Middle from "./components/Middle";
 import Bottom from "./components/Bottom";
@@ -13,7 +12,7 @@ function App() {
 	const changeBlueMode = () => {
 		setmode("darkblue");
 		changestate();
-		document.body.style.backgroundColor = "#091530";
+		document.body.style.backgroundColor = "#0a2052";
 	};
 	const changeGreenMode = () => {
 		setmode("darkgreen");
@@ -23,12 +22,12 @@ function App() {
 	const changeRedMode = () => {
 		setmode("darkred");
 		changestate();
-		document.body.style.backgroundColor = "#260606";
+		document.body.style.backgroundColor = "#531414";
 	};
 	const changeLightMode = () => {
 		setmode("grey");
 		changestate();
-		document.body.style.backgroundColor = "white";
+		document.body.style.backgroundColor = "#cecece";
 	};
 	const x = function (event) {
 		document.getElementById("cursor").style.left = `${event.pageX-10}px`;

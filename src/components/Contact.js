@@ -19,34 +19,59 @@ export default function Contact(props) {
 					<div className="contactpic"></div>
 				</div>
 				<div className="contact_area">
-					<div className={`contact_message text-${"light"}`}>
+					<div
+						className={`contact_message text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
 						<span>Thanks for taking the time to reach out.</span>
 						<span>How can I help you today?</span>
 					</div>
-					<div className={`contact_form text-${"light"}`}>
+					<div
+						className={`contact_form text-${
+							props.mode === "grey" ? "dark" : "light"
+						}`}>
 						<div className="nameemail">
 							<div className="contactname">
-								<label className={` text-${"light"}`} htmlFor="text">
+								<label
+									className={` text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}
+									htmlFor="text">
 									Name
 								</label>
-								<input className={` text-${"light"} bg-darkblue`} type="text" />
+								<input
+									className={` text-${
+										props.mode === "grey" ? "dark" : "light"
+									} bg-${props.mode}`}
+									type="text"
+								/>
 							</div>
 							<div className="contactemail">
-								<label className={` text-${"light"}`} htmlFor="email">
+								<label
+									className={` text-${
+										props.mode === "grey" ? "dark" : "light"
+									}`}
+									htmlFor="email">
 									Email
 								</label>
 								<input
-									className={` text-${"light"} bg-darkblue`}
+									className={` text-${
+										props.mode === "grey" ? "dark" : "light"
+									} bg-${props.mode}`}
 									type="email"
 								/>
 							</div>
 						</div>
 						<div className="contactmessage">
-							<label className={` text-${"light"}`} htmlFor="message">
+							<label
+								className={` text-${props.mode === "grey" ? "dark" : "light"}`}
+								htmlFor="message">
 								Message
 							</label>
 							<textarea
-								className={` text-${"light"} bg-darkblue`}
+								className={` text-${
+									props.mode === "grey" ? "dark" : "light"
+								} bg-${props.mode}`}
 								type="text"
 							/>
 						</div>
@@ -54,8 +79,11 @@ export default function Contact(props) {
 							<button
 								onMouseUp={props.cursoron}
 								onMouseDown={props.cursordown}
-								className={` text-${"light"}`}
-								type="submit">
+								className={` text-${props.mode === "grey" ? "dark" : "light"}`}
+								type="submit"
+								style={
+									!(props.mode === "grey") ? { borderColor: "white" } : {}
+								}>
 								{" "}
 								Submit
 							</button>
@@ -63,7 +91,10 @@ export default function Contact(props) {
 								onClick={erase}
 								onMouseUp={props.cursoron}
 								onMouseDown={props.cursordown}
-								className={`clearall`}>
+								className={`clearall`}
+								style={
+									!(props.mode === "grey") ? { borderColor: "white" } : {}
+								}>
 								<i className={`fa-solid fa-repeat fa-sl `}></i>
 							</div>
 						</div>

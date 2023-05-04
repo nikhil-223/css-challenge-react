@@ -6,9 +6,8 @@ export default function Home() {
 			<div className="home">
         <div className="aboutme">
           <div>
-          <span>Nikhil </span>
-          <span>Shekhawat</span>
-          <span> Hi, I am a web developer , I create beautiful and functional websites , below are services i provide</span>
+          <span>Nikhil Shekhawat</span>
+          <span> Hi, I am a full stack web developer , I specialize in creating dynamic and interactive websites utilizing a range of programming languages and frameworks</span>
           </div>
         </div>
 			</div>

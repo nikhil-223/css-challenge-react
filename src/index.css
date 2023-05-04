@@ -8,7 +8,7 @@ code {
 * {
 	padding: 0;
 	margin: 0;
-	cursor: none !important;
+	/* cursor: none !important; */
 }
 :root {
 	font-size: 3.5vw;
@@ -50,7 +50,6 @@ body::-webkit-scrollbar {
 	display: flex;
 	font-family: "Poppins", sans-serif;
 	font-weight: 800;
-	overflow: hidden;
 }
 .navbar_menu {
 	display: none;
@@ -101,6 +100,7 @@ body::-webkit-scrollbar {
 }
 #contain {
 	width: auto;
+	height: calc(100vh - 14.5rem);
 	display: grid;
 	grid-template-columns: auto;
 	justify-content: center;
@@ -890,7 +890,6 @@ body::-webkit-scrollbar {
 }
 
 .basecss {
-	position: relative;
 	bottom: 0;
 	width: 100vw;
 	height: 10rem;
@@ -951,10 +950,10 @@ body::-webkit-scrollbar {
 	background-color: #031c1c;
 }
 .bg-blue {
-	background-color: #091530;
+	background-color: #354c7f;
 }
 .bg-grey {
-	background-color: #dce1ed;
+	background-color: white;
 }
 .menu_search .pallete:nth-child(1),
 .pallete:nth-child(2),
@@ -963,6 +962,7 @@ body::-webkit-scrollbar {
 }
 .home {
 	width: 100vw;
+	height: calc(100vh - 14.5rem);
 	overflow: hidden;
 }
 /* .home img {
@@ -976,7 +976,7 @@ body::-webkit-scrollbar {
 	display: none;
 	position: absolute;
 	height: 0.5rem;
-	left: 6rem;
+	right: 49.2rem;
 	bottom: 0;
 	z-index: 0;
 	background: var(--c3);
@@ -988,10 +988,10 @@ body::-webkit-scrollbar {
 .aboutme {
 	height: 110vh;
 	width: 100vw;
-	color: rgb(255, 255, 255);
+	color: rgb(18, 176, 145);
 	display: flex;
 	flex-direction: column;
-	background-image: url("/public/images/lufy.jpg");
+	/* background-image: url("/public/images/lufy.jpg"); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1005,18 +1005,15 @@ body::-webkit-scrollbar {
 	display: flex;
 	flex-direction: column;
 	font-family: "Acme", cursive;
-	text-shadow: 0.1rem 0.2rem 0.2rem black;
 }
 .aboutme > div:nth-child(1) span:nth-child(1) {
 	font-size: 12vw;
 	line-height: 5rem;
+	text-shadow: 0.1rem 0.2rem 0.2rem black;
 }
+
 .aboutme > div:nth-child(1) span:nth-child(2) {
-	font-size: 15vw;
-	line-height: 6rem;
-}
-.aboutme > div:nth-child(1) span:nth-child(3) {
-	font-size: 2rem;
+	font-size: 1rem;
 	text-align: center;
 	font-family: "Poppins", sans-serif;
 	font-weight: 900;
@@ -1072,150 +1069,13 @@ body::-webkit-scrollbar {
 	pointer-events: none;
 
 }
-
-@media only screen and (min-width: 500px) {
-	:root {
-		font-size: 1.8vw;
-	}
-	#contain {
-		grid-template-columns: auto auto;
-	}
-
-	.navbar {
-		position: sticky;
-		top: 0rem;
-		height: 4.5rem;
-		flex-direction: row;
-		justify-content: space-between;
-		font-size: 1.2rem;
-		z-index: 5;
-	}
-
-	.navbar_menu {
-		display: flex;
-		flex-direction: row;
-		gap: 1.6rem;
-		align-items: center;
-		margin: 0.5rem 0 0.5rem 0rem;
-		order: 1;
-	}
-	.menu_search {
-		display: flex;
-		margin-top: 0;
-		order: 1;
-	}
-	.navbar > div:nth-child(3) {
-		display: none;
-	}
-	.menu_item_before {
-		display: block;
-	}
-	.navbar_menu .animation {
-		display: flex;
-	}
-	.aboutme {
-		flex-direction: row;
-	}
-	.aboutme > div:nth-child(1) {
-		width: 50%;
-		align-items: flex-start;
-		left: 2rem;
-		top: 5rem;
-		overflow: hidden;
-	}
-	.aboutme > div:nth-child(1) span:nth-child(1) {
-		font-size: 4rem;
-	}
-	.aboutme > div:nth-child(1) span:nth-child(2) {
-		font-size: 5rem;
-	}
-	.aboutme > div:nth-child(1) span:nth-child(3) {
-		font-size: 2.2rem;
-		text-align: left;
-	}
-	::marker {
-		content: "";
-	}
-}
-@media only screen and (min-width: 1000px) {
-	:root {
-		font-size: 0.95vw;
-	}
-	#contain {
-		grid-template-columns: auto auto auto auto;
-	}
-	.navbar {
-		gap: 5rem;
-	}
-	.menu_search {
-		margin-right: 3rem;
-	}
-
-	.menu_item:nth-child(0) {
-		display: block;
-	}
-	.aboutme > div:nth-child(1) {
-		top: 10rem;
-	}
-	.aboutme > div:nth-child(1) span:nth-child(1) {
-		font-size: 5rem;
-	}
-	.aboutme > div:nth-child(1) span:nth-child(2) {
-		font-size: 7rem;
-	}
-
-	.profile_links i:nth-child(1):hover ~ .linkedinlabel {
-		visibility: visible;
-	}
-	.linkedinlabel {
-		position: absolute;
-		font-size: 0.8rem;
-		font-family: "Poppins", Courier, monospace;
-		font-weight: 800;
-		border-radius: 0.2rem;
-		width: 5rem;
-		height: 2rem;
-		color: #ffffff;
-		top: -2rem;
-		left: -6rem;
-		background-color: rgb(20, 75, 63);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		line-height: 1rem;
-		visibility: hidden;
-	}
-	.profile_links i:nth-child(2):hover ~ .githublabel {
-		visibility: visible;
-	}
-	.githublabel {
-		position: absolute;
-		top: -2rem;
-		left: 7rem;
-		font-size: 0.8rem;
-		font-family: "Poppins", Courier, monospace;
-		font-weight: 700;
-		border-radius: 0.2rem;
-		width: 5rem;
-		height: 2rem;
-		color: #ffffff;
-		background-color: rgb(20, 75, 63);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		line-height: 1rem;
-		visibility: hidden;
-	}
-	#cursor{
-		display: none ;
-	}
-}
 .contact{
 	height: 110vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	background: url("/public/images/lufy.jpg");
+	/* background: url("/public/images/lufy.jpg"); */
+	
 	background-repeat: no-repeat;
 	background-position:center;
 	background-size: cover;
@@ -1271,7 +1131,6 @@ body::-webkit-scrollbar {
 	text-align: center;
 	font-size: 2rem;
 	width: 60%;
-	text-shadow: 0.15rem 0.1rem 0.1rem black;
 }
 .nameemail{
 	display: flex;
@@ -1284,7 +1143,6 @@ body::-webkit-scrollbar {
 	gap: 1rem;
 	font-size: 1.5rem;
 	width: 45vw;
-	text-shadow: 0.1rem 0.07rem 0.1rem black;
 }
 .contact_form label{
 	align-self: flex-start;
@@ -1329,8 +1187,176 @@ body::-webkit-scrollbar {
 	border-radius: 1.5rem;
 	background-color: transparent;
 	transition: all 0.3s;
-	text-shadow: 0.1rem 0.07rem 0.1rem black;
 }
 .submitbtn button:hover {
 	background-color: #1abc9c;
+}
+.modes{
+	display: none;
+	position: absolute;
+	cursor: pointer;
+	border-radius: 1rem;
+	right: 50%;
+	top: 80vh;
+	transform: translate(50%);
+
+}
+.modes div{
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+}
+#mode_span{
+	cursor: pointer;
+}
+#mode_span:hover .modes{
+	display: block;
+}
+.modes span{
+	display: none;
+}
+@media only screen and (min-width: 500px) {
+	:root {
+		font-size: 1.8vw;
+	}
+	#contain {
+		grid-template-columns: auto auto;
+	}
+
+	.navbar {
+		position: sticky;
+		top: 0rem;
+		height: 4.5rem;
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 1.2rem;
+		z-index: 5;
+	}
+
+	.navbar_menu {
+		display: flex;
+		flex-direction: row;
+		gap: 1.6rem;
+		align-items: center;
+		margin: 0.5rem 3rem 0.5rem 0rem;
+		order: 2;
+	}
+	.menu_search {
+		display: flex;
+		margin-top: 0;
+		order: 1;
+	}
+	.navbar > div:nth-child(3) {
+		display: none;
+	}
+	.menu_item_before {
+		display: block;
+	}
+	.navbar_menu .animation {
+		display: flex;
+	}
+	.aboutme {
+		flex-direction: row;
+	}
+	.aboutme > div:nth-child(1) {
+		width: 50%;
+		align-items: flex-start;
+		left: 2rem;
+		top: 5rem;
+		overflow: hidden;
+	}
+	.aboutme > div:nth-child(1) span:nth-child(1) {
+		font-size: 4rem;
+	}
+	
+	.aboutme > div:nth-child(1) span:nth-child(2) {
+		font-size: 2.2rem;
+		text-align: left;
+	}
+	::marker {
+		content: "";
+	}
+	
+	.modes{
+	flex-direction: column;
+	width: fit-content;
+	right: 15.5vw;
+	top: 5rem;
+	transform: translate(0);
+	}
+	.modes span{
+		display: flex;
+	}
+}
+@media only screen and (min-width: 1000px) {
+	:root {
+		font-size: 0.8vw;
+	}
+	#contain {
+		grid-template-columns: auto auto auto auto;
+	}
+	.navbar {
+		gap: 5rem;
+	}
+	.menu_search {
+		margin-right: 3rem;
+	}
+
+	.menu_item:nth-child(0) {
+		display: block;
+	}
+	.aboutme > div:nth-child(1) {
+		top: 10rem;
+	}
+	.aboutme > div:nth-child(1) span:nth-child(1) {
+		font-size: 5rem;
+	}
+	
+
+	.profile_links i:nth-child(1):hover ~ .linkedinlabel {
+		visibility: visible;
+	}
+	.linkedinlabel {
+		position: absolute;
+		font-size: 0.8rem;
+		font-family: "Poppins", Courier, monospace;
+		font-weight: 800;
+		border-radius: 0.2rem;
+		width: 5rem;
+		height: 2rem;
+		color: #ffffff;
+		top: -2rem;
+		left: -6rem;
+		background-color: rgb(20, 75, 63);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1rem;
+		visibility: hidden;
+	}
+	.profile_links i:nth-child(2):hover ~ .githublabel {
+		visibility: visible;
+	}
+	.githublabel {
+		position: absolute;
+		top: -2rem;
+		left: 7rem;
+		font-size: 0.8rem;
+		font-family: "Poppins", Courier, monospace;
+		font-weight: 700;
+		border-radius: 0.2rem;
+		width: 5rem;
+		height: 2rem;
+		color: #ffffff;
+		background-color: rgb(20, 75, 63);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1rem;
+		visibility: hidden;
+	}
+	#cursor{
+		display: none ;
+	}
+	
 }
