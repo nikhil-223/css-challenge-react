@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
 }
 #contain {
 	width: auto;
-	height: calc(100vh - 14.5rem);
+	height: auto;
 	display: grid;
 	grid-template-columns: auto;
 	justify-content: center;
@@ -890,6 +890,7 @@ body::-webkit-scrollbar {
 }
 
 .basecss {
+	position: relative;
 	bottom: 0;
 	width: 100vw;
 	height: 10rem;
