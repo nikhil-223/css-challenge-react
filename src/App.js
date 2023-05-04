@@ -8,7 +8,7 @@ import { changestate } from "./components/Navbar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
-	const [mode, setmode] = useState("green");
+	const [mode, setmode] = useState("grey");
 	const changeBlueMode = () => {
 		setmode("darkblue");
 		changestate();

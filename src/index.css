@@ -18,7 +18,7 @@ code {
 	--wave3: #002966;
 	--c1: #256c83;
 	--c2: #06283d;
-	--c3: #1abc9c;
+	--c3: #1c79ac;
 	--c4: #fbf2cf;
 }
 body {
@@ -30,7 +30,7 @@ body {
 	overflow-x: hidden;
 	margin: 0;
 	box-sizing: border-box;
-	background-color: #042829;
+	background-color: #cecece;
 }
 body::-webkit-scrollbar {
 	display: none;
@@ -989,7 +989,7 @@ body::-webkit-scrollbar {
 .aboutme {
 	height: 110vh;
 	width: 100vw;
-	color: rgb(18, 176, 145);
+	color: rgb(15, 83, 125);
 	display: flex;
 	flex-direction: column;
 	/* background-image: url("/public/images/lufy.jpg"); */
